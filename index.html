@@ -1,174 +1,1037 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sun Shine Carwash | Brussels</title>
-  <meta name="description" content="Sun Shine Carwash in Brussels. Online booking for small and big cars.">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Arial,Helvetica,sans-serif;background:#07111f;color:#fff;line-height:1.6}
-    a{text-decoration:none;color:inherit}
-    .nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(7,17,31,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1)}
-    .nav-inner{max-width:1100px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center}
-    .logo{font-size:24px;font-weight:800;color:#ffd43b}
-    .nav a{margin-left:20px;color:#dfe7f2;font-size:14px}
-    .hero{min-height:88vh;padding:150px 22px 80px;display:flex;align-items:center;background:radial-gradient(circle at 80% 20%,#163d62 0,#07111f 45%,#050b14 100%)}
-    .hero-inner{max-width:1100px;margin:auto;width:100%}
-    .badge{display:inline-block;padding:7px 13px;border-radius:999px;background:#ffd43b;color:#111;font-weight:800;font-size:12px;margin-bottom:18px}
-    h1{font-size:clamp(48px,8vw,88px);line-height:.95;margin-bottom:22px}
-    h1 span{color:#ffd43b}
-    .hero p{max-width:620px;color:#b8c5d6;font-size:19px;margin-bottom:30px}
-    .btn{display:inline-block;padding:14px 22px;border-radius:10px;font-weight:800;margin-right:10px}
-    .primary{background:#ffd43b;color:#111}
-    .secondary{border:1px solid #526276;color:#fff}
-    section{padding:80px 22px}
-    .container{max-width:1100px;margin:auto}
-    .section-title{text-align:center;margin-bottom:45px}
-    .section-title h2{font-size:40px}
-    .section-title p{color:#9eacbd}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{background:#0d1b2d;border:1px solid #20334a;border-radius:16px;padding:28px}
-    .icon{font-size:34px;margin-bottom:12px}
-    .card h3{margin-bottom:8px}
-    .card p{color:#aebccd}
-    .pricing{background:#091522}
-    .prices{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:760px;margin:auto}
-    .price-card{background:#0d1b2d;border:1px solid #2a405b;border-radius:18px;padding:34px;text-align:center}
-    .price-card.featured{border-color:#ffd43b}
-    .price{font-size:48px;font-weight:900;color:#ffd43b;margin:15px 0}
-    .price small{font-size:18px;color:#c7d1dc}
-    .booking{background:linear-gradient(135deg,#102943,#08121f)}
-    form{max-width:720px;margin:auto;background:#0a1625;padding:30px;border-radius:18px;border:1px solid #263d56}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    label{font-size:13px;color:#b8c5d6;display:block;margin-bottom:6px}
-    input,select{width:100%;padding:13px;border-radius:9px;border:1px solid #344a61;background:#111f30;color:#fff}
-    .full{grid-column:1/-1}
-    button{width:100%;padding:15px;border:0;border-radius:10px;background:#ffd43b;color:#111;font-weight:900;font-size:16px;cursor:pointer}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:stretch}
-    .contact-box{background:#0d1b2d;border:1px solid #20334a;border-radius:16px;padding:28px}
-    .contact-box p{margin:12px 0;color:#c2cedb}
-    footer{padding:25px 22px;text-align:center;background:#040911;color:#8190a2;font-size:13px}
-    @media(max-width:760px){
-      .nav-links{display:none}.cards,.prices,.contact,.grid{grid-template-columns:1fr}
-      .full{grid-column:auto}.hero{padding-top:125px}h1{font-size:55px}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sun Shine Carwash | Brussels</title>
+
+<meta name="description" content="Sun Shine Carwash in Brussels. Car wash and professional deep shampoo cleaning with online booking.">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#07111f;
+color:white;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.nav{
+position:fixed;
+top:0;
+width:100%;
+z-index:10;
+background:rgba(7,17,31,.95);
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.nav-inner{
+max-width:1100px;
+margin:auto;
+padding:16px 22px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+color:#ffd43b;
+}
+
+.nav a{
+margin-left:20px;
+color:#dfe7f2;
+font-size:14px;
+}
+
+.hero{
+min-height:88vh;
+padding:150px 22px 80px;
+display:flex;
+align-items:center;
+background:radial-gradient(
+circle at 80% 20%,
+#163d62 0,
+#07111f 45%,
+#050b14 100%
+);
+}
+
+.hero-inner{
+max-width:1100px;
+margin:auto;
+width:100%;
+}
+
+.badge{
+display:inline-block;
+padding:7px 13px;
+border-radius:999px;
+background:#ffd43b;
+color:#111;
+font-weight:800;
+font-size:12px;
+margin-bottom:18px;
+}
+
+h1{
+font-size:clamp(48px,8vw,88px);
+line-height:.95;
+margin-bottom:22px;
+}
+
+h1 span{
+color:#ffd43b;
+}
+
+.hero p{
+max-width:650px;
+color:#b8c5d6;
+font-size:19px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 22px;
+border-radius:10px;
+font-weight:800;
+margin-right:10px;
+}
+
+.primary{
+background:#ffd43b;
+color:#111;
+}
+
+.secondary{
+border:1px solid #526276;
+color:white;
+}
+
+section{
+padding:80px 22px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title h2{
+font-size:40px;
+}
+
+.section-title p{
+color:#9eacbd;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:#0d1b2d;
+border:1px solid #20334a;
+border-radius:16px;
+padding:28px;
+}
+
+.icon{
+font-size:34px;
+margin-bottom:12px;
+}
+
+.card h3{
+margin-bottom:8px;
+}
+
+.card p{
+color:#aebccd;
+}
+
+.pricing{
+background:#091522;
+}
+
+.prices{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:24px;
+max-width:850px;
+margin:auto;
+}
+
+.price-card{
+background:#0d1b2d;
+border:1px solid #2a405b;
+border-radius:18px;
+padding:34px;
+text-align:center;
+}
+
+.price-card.featured{
+border-color:#ffd43b;
+}
+
+.price{
+font-size:48px;
+font-weight:900;
+color:#ffd43b;
+margin:15px 0;
+}
+
+.price-card ul{
+list-style:none;
+margin-top:18px;
+color:#c2cedb;
+}
+
+.price-card li{
+margin:8px 0;
+}
+
+.shampoo{
+background:linear-gradient(135deg,#102943,#08121f);
+}
+
+.shampoo-note{
+max-width:760px;
+margin:0 auto 35px;
+padding:18px;
+border:1px solid #ffd43b;
+border-radius:14px;
+text-align:center;
+background:#0d1b2d;
+color:#dfe7f2;
+}
+
+.booking{
+background:#07111f;
+}
+
+form{
+max-width:760px;
+margin:auto;
+background:#0a1625;
+padding:30px;
+border-radius:18px;
+border:1px solid #263d56;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+
+label{
+font-size:13px;
+color:#b8c5d6;
+display:block;
+margin-bottom:6px;
+}
+
+input,
+select{
+width:100%;
+padding:13px;
+border-radius:9px;
+border:1px solid #344a61;
+background:#111f30;
+color:white;
+font-size:15px;
+}
+
+.full{
+grid-column:1/-1;
+}
+
+.help{
+font-size:12px;
+color:#8fa0b3;
+margin-top:6px;
+}
+
+button{
+width:100%;
+padding:15px;
+border:0;
+border-radius:10px;
+background:#ffd43b;
+color:#111;
+font-weight:900;
+font-size:16px;
+cursor:pointer;
+}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.contact-box{
+background:#0d1b2d;
+border:1px solid #20334a;
+border-radius:16px;
+padding:28px;
+}
+
+.contact-box p{
+margin:12px 0;
+color:#c2cedb;
+}
+
+footer{
+padding:25px 22px;
+text-align:center;
+background:#040911;
+color:#8190a2;
+font-size:13px;
+}
+
+@media(max-width:760px){
+
+.nav-links{
+display:none;
+}
+
+.cards,
+.prices,
+.contact,
+.grid{
+grid-template-columns:1fr;
+}
+
+.full{
+grid-column:auto;
+}
+
+.hero{
+padding-top:125px;
+}
+
+h1{
+font-size:55px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="logo">☀ SUN SHINE</div>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#pricing">Prices</a>
-        <a href="#booking">Booking</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
 
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="badge">BRUSSELS • PROFESSIONAL CAR WASH</div>
-      <h1>Clean car.<br><span>Bright shine.</span></h1>
-      <p>Give your car the fresh, clean look it deserves at Sun Shine Carwash in Brussels. Easy online booking for small and big cars.</p>
-      <a class="btn primary" href="#booking">Book Online</a>
-      <a class="btn secondary" href="tel:+32465911643">Call 0032 465 91 16 43</a>
-    </div>
-  </header>
+<nav class="nav">
 
-  <section id="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Our Services</h2>
-        <p>Professional care for your vehicle.</p>
-      </div>
-      <div class="cards">
-        <div class="card"><div class="icon">🚿</div><h3>Exterior Wash</h3><p>Fresh exterior cleaning to remove everyday dirt and grime.</p></div>
-        <div class="card"><div class="icon">✨</div><h3>Shine Finish</h3><p>A clean, polished look that makes your car stand out.</p></div>
-        <div class="card"><div class="icon">🚗</div><h3>Car Care</h3><p>Carefully handled service for both small and big vehicles.</p></div>
-      </div>
-    </div>
-  </section>
+<div class="nav-inner">
 
-  <section id="pricing" class="pricing">
-    <div class="container">
-      <div class="section-title">
-        <h2>Simple Pricing</h2>
-        <p>Choose the option that fits your car.</p>
-      </div>
-      <div class="prices">
-        <div class="price-card">
-          <h3>Small Car</h3>
-          <div class="price">€48.50</div>
-          <p>Online booking price</p>
-        </div>
-        <div class="price-card featured">
-          <h3>Big Car</h3>
-          <div class="price">€60</div>
-          <p>Online booking price</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="logo">
+☀ SUN SHINE
+</div>
 
-  <section id="booking" class="booking">
-    <div class="container">
-      <div class="section-title">
-        <h2>Book Your Wash</h2>
-        <p>Send your booking request online.</p>
-      </div>
-      <form id="bookingForm">
-        <div class="grid">
-          <div><label>Your Name</label><input id="name" required placeholder="Your name"></div>
-          <div><label>Phone</label><input id="phone" required placeholder="Your phone number"></div>
-          <div><label>Car Type</label>
-            <select id="car" required>
-              <option value="">Choose...</option>
-              <option>Small Car — €48.50</option>
-              <option>Big Car — €60</option>
-            </select>
-          </div>
-          <div><label>Preferred Date</label><input id="date" type="date" required></div>
-          <div class="full"><label>Preferred Time</label><input id="time" type="time" required></div>
-          <div class="full"><button type="submit">Send Booking Request</button></div>
-        </div>
-      </form>
-    </div>
-  </section>
+<div class="nav-links">
 
-  <section id="contact">
-    <div class="container">
-      <div class="section-title"><h2>Visit Sun Shine</h2><p>We are ready to make your car shine.</p></div>
-      <div class="contact">
-        <div class="contact-box">
-          <h3>📍 Address</h3>
-          <p>Chaussee de Vleurgat 208<br>1000 Brussels, Belgium</p>
-          <a class="btn primary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Chaussee%20de%20Vleurgat%20208%201000%20Brussels">Open in Maps</a>
-        </div>
-        <div class="contact-box">
-          <h3>📞 Contact</h3>
-          <p>0032 465 91 16 43</p>
-          <a class="btn primary" href="tel:+32465911643">Call Now</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<a href="#services">Services</a>
+<a href="#pricing">Prices</a>
+<a href="#shampoo">Shampoo</a>
+<a href="#booking">Booking</a>
+<a href="#contact">Contact</a>
 
-  <footer>© 2026 Sun Shine Carwash • Chaussee de Vleurgat 208, 1000 Brussels</footer>
+</div>
 
-  <script>
-    document.getElementById('bookingForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const name=document.getElementById('name').value;
-      const phone=document.getElementById('phone').value;
-      const car=document.getElementById('car').value;
-      const date=document.getElementById('date').value;
-      const time=document.getElementById('time').value;
-      const message=`Hello Sun Shine Carwash, I would like to book a wash.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ACar: ${encodeURIComponent(car)}%0ADate: ${encodeURIComponent(date)}%0ATime: ${encodeURIComponent(time)}`;
-      window.location.href='https://wa.me/32465911643?text='+message;
-    });
-  </script>
+</div>
+
+</nav>
+
+
+<header class="hero">
+
+<div class="hero-inner">
+
+<div class="badge">
+BRUSSELS • PROFESSIONAL CAR WASH
+</div>
+
+<h1>
+Clean car.<br>
+<span>Bright shine.</span>
+</h1>
+
+<p>
+Professional car washing and deep shampoo cleaning
+for small and large vehicles in Brussels.
+Easy online booking.
+</p>
+
+<a class="btn primary" href="#booking">
+Book Online
+</a>
+
+<a class="btn secondary" href="tel:+32465911643">
+Call 0032 465 91 16 43
+</a>
+
+</div>
+
+</header>
+
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Our Services</h2>
+
+<p>
+Professional care for your vehicle.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">🚿</div>
+
+<h3>
+Exterior Wash
+</h3>
+
+<p>
+Fresh exterior cleaning to remove
+everyday dirt and grime.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">✨</div>
+
+<h3>
+Shine Finish
+</h3>
+
+<p>
+A clean and polished look that makes
+your car shine.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🧴</div>
+
+<h3>
+Deep Shampoo
+</h3>
+
+<p>
+Professional deep shampoo cleaning for
+interior and vehicle care.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="pricing" class="pricing">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Car Wash Prices
+</h2>
+
+<p>
+Choose the size that matches your vehicle.
+</p>
+
+</div>
+
+
+<div class="prices">
+
+
+<div class="price-card">
+
+<h3>
+🚗 Small Car
+</h3>
+
+<div class="price">
+€48.50
+</div>
+
+<p>
+Standard car wash
+</p>
+
+<ul>
+
+<li>✓ Small hatchbacks</li>
+<li>✓ Small cars</li>
+<li>✓ Compact vehicles</li>
+<li>✓ Small sedans</li>
+
+</ul>
+
+</div>
+
+
+<div class="price-card featured">
+
+<h3>
+🚙 Big Car
+</h3>
+
+<div class="price">
+€60
+</div>
+
+<p>
+Standard car wash
+</p>
+
+<ul>
+
+<li>✓ Large SUVs</li>
+<li>✓ Large Volvo models</li>
+<li>✓ Range Rover / similar size</li>
+<li>✓ Large Porsche SUV models</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="shampoo" class="shampoo">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Deep Shampoo Cleaning
+</h2>
+
+<p>
+Professional deep cleaning for your vehicle.
+</p>
+
+</div>
+
+
+<div class="shampoo-note">
+
+🧴 <strong>Deep Shampoo Service</strong>
+
+<br>
+
+The price depends on the size of the vehicle.
+
+</div>
+
+
+<div class="prices">
+
+
+<div class="price-card">
+
+<h3>
+🚗 Small Car Shampoo
+</h3>
+
+<div class="price">
+€160
+</div>
+
+<p>
+Deep shampoo cleaning
+</p>
+
+</div>
+
+
+<div class="price-card featured">
+
+<h3>
+🚙 Big Car Shampoo
+</h3>
+
+<div class="price">
+€180
+</div>
+
+<p>
+Deep shampoo cleaning
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="booking" class="booking">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Book Your Wash
+</h2>
+
+<p>
+Choose your service, vehicle size and
+one-hour appointment.
+</p>
+
+</div>
+
+
+<form id="bookingForm">
+
+<div class="grid">
+
+
+<div>
+
+<label>Your Name</label>
+
+<input
+id="name"
+required
+placeholder="Your name"
+>
+
+</div>
+
+
+<div>
+
+<label>Phone</label>
+
+<input
+id="phone"
+required
+placeholder="Your phone number"
+>
+
+</div>
+
+
+<div class="full">
+
+<label>Service</label>
+
+<select id="service" required>
+
+<option value="">
+Choose service...
+</option>
+
+<option value="Standard Car Wash">
+Standard Car Wash
+</option>
+
+<option value="Deep Shampoo Cleaning">
+Deep Shampoo Cleaning
+</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>Vehicle Size</label>
+
+<select id="car" required>
+
+<option value="">
+Choose vehicle size...
+</option>
+
+<option value="Small Car">
+🚗 Small Car
+</option>
+
+<option value="Big Car">
+🚙 Big Car
+</option>
+
+</select>
+
+<div class="help">
+
+Small: compact, hatchback, small sedan.<br>
+
+Big: large SUV and similar large vehicles.
+
+</div>
+
+</div>
+
+
+<div>
+
+<label>Price</label>
+
+<input
+id="price"
+readonly
+placeholder="Choose service and vehicle size"
+>
+
+</div>
+
+
+<div>
+
+<label>Preferred Date</label>
+
+<input
+id="date"
+type="date"
+required
+>
+
+</div>
+
+
+<div>
+
+<label>Preferred Time</label>
+
+<select id="time" required>
+
+<option value="">
+Choose one-hour slot...
+</option>
+
+<option>08:00 - 09:00</option>
+<option>09:00 - 10:00</option>
+<option>10:00 - 11:00</option>
+<option>11:00 - 12:00</option>
+<option>12:00 - 13:00</option>
+<option>13:00 - 14:00</option>
+<option>14:00 - 15:00</option>
+<option>15:00 - 16:00</option>
+<option>16:00 - 17:00</option>
+<option>17:00 - 18:00</option>
+<option>18:00 - 19:00</option>
+
+</select>
+
+</div>
+
+
+<div class="full">
+
+<button type="submit">
+Send Booking Request on WhatsApp
+</button>
+
+</div>
+
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Visit Sun Shine
+</h2>
+
+<p>
+We are ready to make your car shine.
+</p>
+
+</div>
+
+
+<div class="contact">
+
+
+<div class="contact-box">
+
+<h3>
+📍 Address
+</h3>
+
+<p>
+Chaussee de Vleurgat 208<br>
+1000 Brussels, Belgium
+</p>
+
+<a
+class="btn primary"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Chaussee%20de%20Vleurgat%20208%201000%20Brussels"
+>
+Open in Maps
+</a>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>
+📞 Contact
+</h3>
+
+<p>
+0032 465 91 16 43
+</p>
+
+<a
+class="btn primary"
+href="tel:+32465911643"
+>
+Call Now
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Sun Shine Carwash •
+Chaussee de Vleurgat 208, 1000 Brussels
+
+</footer>
+
+
+<script>
+
+const service =
+document.getElementById('service');
+
+const car =
+document.getElementById('car');
+
+const price =
+document.getElementById('price');
+
+
+function updatePrice(){
+
+const s = service.value;
+
+const c = car.value;
+
+
+price.value = "";
+
+
+if(
+s === "Standard Car Wash" &&
+c === "Small Car"
+){
+
+price.value = "€48.50";
+
+}
+
+
+if(
+s === "Standard Car Wash" &&
+c === "Big Car"
+){
+
+price.value = "€60";
+
+}
+
+
+if(
+s === "Deep Shampoo Cleaning" &&
+c === "Small Car"
+){
+
+price.value = "€160";
+
+}
+
+
+if(
+s === "Deep Shampoo Cleaning" &&
+c === "Big Car"
+){
+
+price.value = "€180";
+
+}
+
+}
+
+
+service.addEventListener(
+'change',
+updatePrice
+);
+
+car.addEventListener(
+'change',
+updatePrice
+);
+
+
+const dateInput =
+document.getElementById('date');
+
+
+const today = new Date();
+
+
+const year =
+today.getFullYear();
+
+
+const month =
+String(
+today.getMonth() + 1
+).padStart(2,'0');
+
+
+const day =
+String(
+today.getDate()
+).padStart(2,'0');
+
+
+dateInput.min =
+`${year}-${month}-${day}`;
+
+
+document
+.getElementById('bookingForm')
+.addEventListener(
+'submit',
+function(e){
+
+e.preventDefault();
+
+
+const name =
+document.getElementById('name').value;
+
+
+const phone =
+document.getElementById('phone').value;
+
+
+const selectedService =
+service.value;
+
+
+const selectedCar =
+car.value;
+
+
+const selectedPrice =
+price.value;
+
+
+const date =
+document.getElementById('date').value;
+
+
+const time =
+document.getElementById('time').value;
+
+
+const message =
+`Hello Sun Shine Carwash, I would like to make a booking.
+
+Name: ${name}
+Phone: ${phone}
+Service: ${selectedService}
+Vehicle Size: ${selectedCar}
+Price: ${selectedPrice}
+Date: ${date}
+Time: ${time}`;
+
+
+window.location.href =
+'https://wa.me/32465911643?text=' +
+encodeURIComponent(message);
+
+});
+
+</script>
+
 </body>
 </html>
