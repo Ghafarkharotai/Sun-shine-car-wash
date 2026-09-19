@@ -339,7 +339,32 @@ font-size:55px;
 
 }
 
-</style>
+</style>.gallery{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.gallery h2{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.gallery p{
+  margin-bottom:30px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:15px;
+}
 </head>
 
 <body>
@@ -396,7 +421,19 @@ Call 0032 465 91 16 43
 
 </div>
 
-</header>
+</header><section class="gallery">
+  <div class="container">
+    <h2>Our Work</h2>
+    <p>Professional car cleaning in Brussels.</p>
+
+    <div class="gallery-grid">
+      <img src="IMG_8591.jpeg" alt="Sun Shine Car Wash">
+      <img src="IMG_8592.jpeg" alt="Sun Shine Car Wash">
+      <img src="IMG_8593.jpeg" alt="Sun Shine Car Wash">
+      <img src="IMG_8594.jpeg" alt="Sun Shine Car Wash">
+    </div>
+  </div>
+</section>
 
 
 <section id="services">
